@@ -14,6 +14,9 @@
   <img alt="dev.finances" src=".github/yourfinances.png" width="100%">
 </p>
 
+## 💻 Demo
+https://cassiamaria.github.io/your-finances/
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as tecnologias:
