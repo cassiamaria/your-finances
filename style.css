@@ -82,7 +82,8 @@ button:hover {
 
 .button.cancel {
     font-size: 13px;
-    color: #e92929;
+    background:#e92929;;
+    color: #fff;
     border: 2px solid #e92929;
     border-radius: 0.5rem;
     height: 40px;
@@ -254,7 +255,7 @@ td img.minus {
     margin-top: 0.8rem;
 }
 
-.input-group small {
+.input-group .help {
     opacity: 0.4    ;
 }
 
@@ -286,5 +287,12 @@ footer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
+    }
+}
+
+@media (max-width: 375px) {
+    button,
+    .button.cancel {
+        font-size: 11px;
     }
 }
