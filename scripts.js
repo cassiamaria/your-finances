@@ -89,9 +89,15 @@ const DOM = {
   },
 
   updateBalance() {
-    document.getElementById("incomeDisplay").innerHTML = Utils.formatCurrency(Transaction.incomes());
-    document.getElementById("expenseDisplay").innerHTML = Utils.formatCurrency(Transaction.expenses());
-    document.getElementById("totalDisplay").innerHTML = Utils.formatCurrency(Transaction.total());
+    document.getElementById("incomeDisplay").innerHTML = Utils.formatCurrency(
+      Transaction.incomes()
+    );
+    document.getElementById("expenseDisplay").innerHTML = Utils.formatCurrency(
+      Transaction.expenses()
+    );
+    document.getElementById("totalDisplay").innerHTML = Utils.formatCurrency(
+      Transaction.total()
+    );
   },
 
   clearTransactions() {
@@ -140,7 +146,11 @@ const Form = {
   validateFields() {
     const { description, amount, date } = Form.getValues();
 
-    if (description.trim() === "" || amount.trim() === "" || date.trim() === "") {
+    if (
+      description.trim() === "" ||
+      amount.trim() === "" ||
+      date.trim() === ""
+    ) {
       throw new Error("Por favor, preencha todos os campos");
     }
   },
@@ -182,7 +192,7 @@ const Form = {
 const App = {
   init() {
     Transaction.all.forEach(DOM.addTransaction);
-    DOM.updateBalance();    
+    DOM.updateBalance();
     Storage.set(Transaction.all);
   },
   reload() {
